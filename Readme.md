@@ -1,6 +1,6 @@
 # LeetCode SQL Summary
 
-**_Last updated on August 8, 2021, covered 106 LeetCode SQL questions_**
+**Last updated on August 8, 2021, covered 106 LeetCode SQL questions_**
 
 **WIP**
 - Update new SQL questions (Estimated Time: 31 August, 2021)
