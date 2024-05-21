@@ -1,3 +1,18 @@
+--SOLUTION 1
+SELECT e.business_id
+FROM events e
+LEFT JOIN
+    (SELECT event_type,
+        AVG(occurences) AS avg_occurences
+    FROM events
+    GROUP BY 1) AS a
+USING(event_type)
+GROUP BY 1
+HAVING SUM(CASE WHEN e.occurences > a.avg_occurences THEN 1 ELSE 0 END) > 1
+
+    
+
+--SOLUTION 2
 -- calculate average occurences of event types amont all business
 WITH tb1 AS (
     SELECT *,
